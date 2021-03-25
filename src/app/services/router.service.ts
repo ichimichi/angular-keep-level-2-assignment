@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Injectable()
 export class RouterService {
+  constructor(private router: Router) {}
 
-  constructor() { }
+  routeToDashboard = () => {
+    this.router.navigate(["dashboard"]);
+  };
 
-  routeToDashboard() {
-
-  }
-
-  routeToLogin() {
-  	
-  }
+  routeToLogin = () => {
+    this.router.navigate(["login"]);
+  };
 }
